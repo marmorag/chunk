@@ -1,0 +1,25 @@
+
+namespace: marmorag
+name: chunk
+version: 1.0.0
+readme: README.md
+
+authors:
+- Guillaume Marmorat <guillaume.marmorat(at)gmail.com>
+
+description: chunk list by any size
+
+license_file: 'License.md'
+
+tags: ['development', 'system']
+
+dependencies: {}
+
+# The URL of the originating SCM repository
+repository: https://github.com/marmorag/chunk
+# The URL to any online docs
+documentation: https://github.com/marmorag/chunk
+# The URL to the homepage of the collection/project
+homepage: https://github.com/marmorag/chunk
+# The URL to the collection issue tracker
+issues: https://github.com/marmorag/chunk/issues
