@@ -26,7 +26,7 @@ ansible-galaxy collection install marmorag.chunk
     your_list: [0,1,2,3,4]
 
 - name: chunk list
-  ansodium:
+  chunk:
     src: "{{ your_list  }}"
     size: 2
 ```
