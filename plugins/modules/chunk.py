@@ -54,6 +54,7 @@ chunks:
 '''
 from ansible.module_utils.basic import AnsibleModule
 
+
 class Chunk:
     def __init__(self, module):
         self.module = module
@@ -71,9 +72,10 @@ class Chunk:
         self.chunks()
 
         self.module.exit_json(**self.result)
-    
+
     def chunks(self):
-        self.result.chunks = [self.src[i:i + self.size] for i in range(0, len(self.src), self.size)]
+        self.result['chunks'] = [self.src[i:i + self.size] for i in range(0, len(self.src), self.size)]
+        self.result['changed'] = True
 
 
 def run_module():
