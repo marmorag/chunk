@@ -20,15 +20,20 @@ ansible-galaxy collection install marmorag.chunk
 
 ---
 
-```yamlex
+```yaml
 - name: your list
   set_fact:
     your_list: [0,1,2,3,4]
 
 - name: chunk list
   chunk:
-    src: "{{ your_list  }}"
+    src: "{{ your_list }}"
     size: 2
+  register: chunked
+
+- name: process
+  command: "echo {{ item }}"
+  loop: "{{ chunked.chunks }}"
 ```
 
 Output format : 
